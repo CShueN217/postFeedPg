@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './Home';
+import FeedDetail from './FeedDetail'
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Routes
+} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} exact />
+        <Route path="/feed/:slug" element={<FeedDetail />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

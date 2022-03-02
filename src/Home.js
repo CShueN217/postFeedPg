@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './Home.css';
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import axios from 'axios';
-import Feed from './Feed'
+import Feed from './Feed';
 const Layout = (props) => {
   return (
     <div className="layout" style={{ minHeight: window.innerHeight }}>

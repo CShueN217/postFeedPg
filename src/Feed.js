@@ -14,6 +14,19 @@ function Feed() {
             .catch((error) => {
                 console.log(error)
             })
+
+        // const data = {
+        //     email: "dasdasd@gmail.com",
+        //     password: "dsfafsdfsd"
+        // }
+
+        // axios.post('https://api.realworld.io/api/users/login', data)
+        //     .then(res => {
+        //         console.log('successfully fetched user', res)
+        //     })
+        //     .catch((error) => {
+        //         console.log(error)
+        //     })
     }, []);
 
     function capitalizeFirstLetter(string) {
@@ -36,7 +49,7 @@ function Feed() {
                                                 feed.tagList && feed.tagList.length > 0 &&
                                                 feed.tagList.map((tag, index) => {
                                                     return (
-                                                        <div className="tag" style={{ border: `2px solid #${index * 2 + feed.tagList.length}666ff` }}>
+                                                        <div className="tag" key={index} style={{ border: `2px solid #${index * 2 + feed.tagList.length}666ff` }}>
                                                             {tag}
                                                         </div>
                                                     )
