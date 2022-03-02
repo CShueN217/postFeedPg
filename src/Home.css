@@ -1,0 +1,130 @@
+.layout{
+  background-color: #07080b;
+  height: auto;
+  display: block;
+  margin: auto;
+  padding: 2rem;
+  color: #CCCCCC;
+}
+
+.light-dark{
+  background-color: #161a20;
+}
+
+.dark{
+  background-color: #0c0f13;
+}
+
+.feed-inner-container,
+.create-feed-container{
+  border-radius: 8px;
+  display: block;
+  align-items: center;
+  width: 600px;
+  margin: auto;
+  height: auto;
+}
+
+.create-feed-container:hover{
+  box-shadow: 2px 1px 20px grey;
+}
+
+.feed-title{
+  padding: 10px 1rem;
+  font-size: 25px;
+  border-bottom: 2px solid #07080b ;
+  font-weight: bolder;
+}
+
+.feed-content{
+  color: white;
+  border: none;
+  resize: none;
+  width: -webkit-fill-available;
+  border-style: none;
+  border-color: transparent;
+  overflow: auto;
+  outline: none;
+  font-size: 21px;
+  padding: 1rem;
+}
+
+::placeholder{
+  color:#54617b;
+}
+
+.mg-tp-btm-2rem{
+  margin: 2rem auto;
+}
+
+.user-box{
+  display: flex;
+  padding: 1rem;
+}
+
+.user-icon{
+  border-radius: 50%;
+  flex:1;
+  width: 50px;
+  height: 50px;
+}
+
+.username{
+  flex: 10;
+  margin-left: 1rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.username p{
+  margin-top: 5px;
+  font-weight: 400;
+  color: grey;
+  cursor: pointer;
+}
+
+.feedpage-title:hover{
+  color: white;
+  font-size: 27px;
+  transition: .4s;
+  text-shadow: 2px 2px 20px grey;
+}
+
+.feedpage-title{
+  color: #CCCCCC;
+  padding: 5px 1rem;
+  font-size: 25px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.description{
+  margin: 0;
+  padding: 0 1rem 1rem 1rem;
+  color: grey;
+  font-size: 15px;
+}
+
+
+.feed-body{
+  padding: 1rem;
+  font-size: 18px;
+}
+
+.favorite-icon{
+  width: 20px;
+  align-self: center;
+}
+
+.post-detail-container{
+  display: flex;
+  padding: 1rem
+}
+
+.favoritesCount{
+  align-self: center;
+  margin-left: 15px;
+  font-size: 20px;
+  color: white;
+}
+
