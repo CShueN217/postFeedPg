@@ -1,0 +1,93 @@
+.top-header{
+    padding: 2rem 5rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(8,3,40,1) 20%, rgba(29,18,98,1) 63%, rgba(65,38,166,1) 100%);
+    /* position: absolute; */
+    /* width: 100%; */
+}
+
+.user-avatar{
+    width: 65px;
+    border-radius: 50%;
+}
+
+.username{
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+
+.follow-status{
+    margin-top: 1rem;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.status{
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+}
+
+.follower, .status{
+    width: 130px;
+}
+
+.status img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.content-container{
+    width: 60%;
+    margin: auto;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 0 2rem 3rem;
+    background-color: white;
+    color: black;
+}
+
+.body-container{
+    padding: 2rem;
+}
+
+h3{
+    /* color:white; */
+    font-size: 30px;
+}
+
+.content{
+    font-size: 22px;
+    margin-top: 5rem;
+}
+
+.like-comment-container{
+    display: flex;
+    border: 2px solid #CCCCCC;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    background-color: #07080b6c;
+}
+
+.comment-icon{
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+.commentCount{
+    align-self: center;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.box{
+    display: inline-flex;
+    width: 20%
+}
