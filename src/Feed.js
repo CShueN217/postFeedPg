@@ -40,44 +40,42 @@ function Feed() {
                 feedList && feedList.length ?
                     feedList.map((feed, index) => {
                         return (
-                            <Link to={`/feed/${feed.slug}`} className="link-style">
-                                <div key={index} className="feed-inner-container mg-tp-btm-2rem dark">
-                                    <div className="user-box">
-                                        <img className="user-icon" src={feed.author.image} alt='user-icon' />
-                                        <div className="username-box">
-                                            <span>{feed.author.username}</span>
-                                            <div className="tag-container">
-                                                {
-                                                    feed.tagList && feed.tagList.length > 0 &&
-                                                    feed.tagList.map((tag, index) => {
-                                                        return (
-                                                            <div className="tag" key={index} style={{ border: `2px solid #${index * 2 + feed.tagList.length}666ff` }}>
-                                                                {tag}
-                                                            </div>
-                                                        )
-                                                    })
-                                                }
-                                            </div>
+                            <div key={index} className="feed-inner-container mg-tp-btm-2rem dark">
+                                <div className="user-box">
+                                    <img className="user-icon" src={feed.author.image} alt='user-icon' />
+                                    <div className="username-box">
+                                        <span>{feed.author.username}</span>
+                                        <div className="tag-container">
+                                            {
+                                                feed.tagList && feed.tagList.length > 0 &&
+                                                feed.tagList.map((tag, index) => {
+                                                    return (
+                                                        <div className="tag" key={index} style={{ border: `2px solid #${index * 2 + feed.tagList.length}666ff` }}>
+                                                            {tag}
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                         </div>
-                                    </div>
-                                    <div className="feed-content-container">
-                                        <div className="feedpage-title">
-                                            {feed.title}
-                                        </div>
-                                        <p className="description">{capitalizeFirstLetter(feed.description)}</p>
-                                        <p className="feed-body">{feed.body}</p>
-                                    </div>
-                                    <div className="post-detail-container">
-                                        {
-                                            feed.favorited ?
-                                                <img className="favorite-icon" src="./heart.png" />
-                                                :
-                                                <img className="favorite-icon" src="./love.png" />
-                                        }
-                                        <div className="favoritesCount">{feed.favoritesCount}</div>
                                     </div>
                                 </div>
-                            </Link>
+                                <div className="feed-content-container">
+                                    <Link to={`/feed/${feed.slug}`} className="link-style feedpage-title">
+                                        {feed.title}
+                                    </Link>
+                                    <p className="description">{capitalizeFirstLetter(feed.description)}</p>
+                                    <p className="feed-body">{feed.body}</p>
+                                </div>
+                                <div className="post-detail-container">
+                                    {
+                                        feed.favorited ?
+                                            <img className="favorite-icon" src="./heart.png" />
+                                            :
+                                            <img className="favorite-icon" src="./love.png" />
+                                    }
+                                    <div className="favoritesCount">{feed.favoritesCount}</div>
+                                </div>
+                            </div>
                         )
                     })
                     :

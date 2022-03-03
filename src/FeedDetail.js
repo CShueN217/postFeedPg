@@ -6,7 +6,14 @@ function FeedDetail() {
     const { slug } = useParams();
     const url = `https://api.realworld.io/api/articles/${slug}`
     useEffect(() => {
-
+        axios.get(url)
+            .then(res => {
+                console.log('successfully fetched article', res.data.article)
+                //feedList.articles['0'].author.username
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }, []);
 
     return (
