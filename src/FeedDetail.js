@@ -49,7 +49,7 @@ function FeedDetail() {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
     return (
-        <Layout padding={false}>
+        <Layout>
             {
                 content.feed.author &&
                 <div className="top-header">
@@ -90,21 +90,11 @@ function FeedDetail() {
                                 </div>
 
                             </div>
-                            {/* <div>
-                                {
-                                    commentList && commentList.length &&
-                                    commentList.map((comment, index) => {
-                                        return (
-                                            <div key={index}>
-                                                {comment.body}
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div> */}
+
                             <Comment
                                 commentList={commentList}
                                 addComment={addComment}
+                                slug={slug}
                             />
                         </div>
                     </div>

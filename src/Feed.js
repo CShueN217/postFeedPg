@@ -16,18 +16,6 @@ function Feed() {
                 console.log(error)
             })
 
-        // const data = {
-        //     email: "dasdasd@gmail.com",
-        //     password: "dsfafsdfsd"
-        // }
-
-        // axios.post('https://api.realworld.io/api/users/login', data)
-        //     .then(res => {
-        //         console.log('successfully fetched user', res)
-        //     })
-        //     .catch((error) => {
-        //         console.log(error)
-        //     })
     }, []);
 
     function capitalizeFirstLetter(string) {

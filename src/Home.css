@@ -4,7 +4,8 @@
   display: block;
   margin: auto;
   color: #CCCCCC;
-  font-family: 'Fredoka', sans-serif;;
+  font-family: 'Fredoka', sans-serif;
+  padding-bottom: 2rem;
 }
 
 .light-dark{
@@ -151,4 +152,42 @@
 .link-style{
   text-decoration: none;
   color: inherit;
+}
+
+.sign-in-container{
+  padding: 1rem 2rem;
+  display: flex;
+  font-size: 20px;
+}
+
+.justify-content-flex-end{
+  justify-content: flex-end;
+}
+
+.sign-in-text{
+  text-align: end;
+  padding: 5px 10px;
+}
+
+.sign-in-text:hover{
+  color: white;
+  border-radius: 5px;
+  background-color: #3dff57a6;
+}
+
+.user-info-container{
+  display: inline-flex;
+  align-items: center;
+}
+
+.user-info-container .icon{
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.user-info-container span{
+  color: white;
+  text-shadow: 1px 1px 5px grey;
+  margin-left: 2rem;
 }
