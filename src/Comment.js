@@ -6,7 +6,7 @@ import { CommentContext } from './FeedDetail'
 export default function Comment(props) {
     const [feedText, setfeedText] = useState('');
     const { commentList, slug, addComment, setCommentList } = useContext(CommentContext)
-    const userName = JSON.parse(sessionStorage.getItem('user')).username;
+    const userName = sessionStorage.getItem('user') ? JSON.parse(sessionStorage.getItem('user')).username : '';
 
     const postComment = () => {
         if (feedText === '') {
