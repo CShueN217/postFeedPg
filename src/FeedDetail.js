@@ -87,7 +87,7 @@ function FeedDetail() {
                                         <div className="favoritesCount">{content.favoritesCount}</div>
                                     </div>
                                     <div className="box">
-                                        <img className="comment-icon" src="/comment.png" onClick={() => { setAddComment(true) }} />
+                                        <img className="comment-icon" src="/comment.png" onClick={() => { setAddComment(sessionStorage.getItem('token') ? true : false) }} />
                                         <div className="commentCount">{commentList && commentList.length ? commentList.length : '0'}</div>
                                     </div>
 
