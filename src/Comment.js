@@ -1,12 +1,11 @@
 import './Comment.css';
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { CommentContext } from './FeedDetail'
 
 export default function Comment(props) {
-    var addComment = props.addComment;
-    var slug = props.slug;
     const [feedText, setfeedText] = useState('');
-    var commentList = props.commentList;
+    const { commentList, slug, addComment, setCommentList } = useContext(CommentContext)
 
 
     const postComment = () => {
@@ -14,19 +13,22 @@ export default function Comment(props) {
             return;
         }
         const data = {
-            user: {
-                token: `${sessionStorage.getItem('token')}`,
-                email: JSON.parse(sessionStorage.getItem('user')).email,
-                username: JSON.parse(sessionStorage.getItem('user')).username,
-            },
             comment: {
-
                 body: feedText
             }
         }
-        axios.post(`https://api.realworld.io/api/articles/${slug}/comments`, data)
+
+        axios.post(`https://api.realworld.io/api/articles/${slug}/comments`, data, {
+            headers: {
+                'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                'Content-type': 'application/json',
+                'Accept': 'application/json',
+            },
+        })
             .then(res => {
-                console.log('successfully post comment', res);
+                console.log('successfully post comment', res.data.comment);
+                setfeedText('');
+                setCommentList([...commentList, res.data.comment])
             })
             .catch((error) => {
                 console.log(error)
